@@ -1,0 +1,21 @@
+- Esse código vai no postman criando um metodo POST no url - http://localhost:8080/alunos
+  em body > raw e depois clicando em send.
+
+{
+    "nomeAluno" : "Nome",
+    "emailAluno" : "email@gmail.com",
+    "telefoneAluno" : "+55 (11) 12345-6789"
+}
+
+- ao fazer isso os dados serão adicionados a tabela do sql.lembrando que a tabela deve estar no workbench, crie com:
+
+create database escola
+
+- ou pode se adicionar pelo query do sql:
+
+use escola;
+
+INSERT INTO aluno (nome_aluno, email_aluno, telefone_aluno) VALUES ('João Silva', 'joao@example.com', '(11) 98765-4321');
+INSERT INTO aluno (nome_aluno, email_aluno, telefone_aluno) VALUES ('Maria Oliveira', 'maria@example.com', '(11) 91234-5678');
+
+- rode o código com SenaiAplication.java e acesse http://localhost:8080/ para ver os alunos no banco de dados.
